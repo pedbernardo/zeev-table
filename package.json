@@ -1,0 +1,50 @@
+{
+  "name": "zeev-table",
+  "version": "0.0.0",
+  "description": "Non official Zeev library for multi-value tables",
+  "main": "dist/table-mv.esm.js",
+  "module": "dist/table-mv.esm.js",
+  "browser": "dist/table-mv.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "prebuild": "rimraf dist && npm run lint",
+    "build": "rollup -c",
+    "lint": "eslint . --max-warnings=0 --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.js": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedbernardo/zeev-table.git"
+  },
+  "keywords": [
+    "zeev",
+    "orquestra",
+    "bpm",
+    "bpms",
+    "table",
+    "form"
+  ],
+  "author": "Pedro Bernardo <pedrovbernardo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedbernardo/zeev-table/issues"
+  },
+  "homepage": "https://github.com/pedbernardo/zeev-table#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "eslint": "8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-n": "15.0.0",
+    "eslint-plugin-promise": "6.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.72.0",
+    "vitest": "^0.10.5"
+  }
+}

@@ -231,9 +231,12 @@ _Não é necessário parâmetros_
 <br>
 
 #### `appendData`
-Retorna todas as linhas da tabela multi-valorada, exceto o cabeçalho
+Adiciona dados (e novas linhas, caso necessário) aos campos da tabela multi-valorada a partir de um array de objetos chave-valor, conforme os identificadores dos campos de formulário.
 
-_Não é necessário parâmetros_
+> TableMv.appendData( Array - Dados , Object [optional] - Configuração )_
+
+**Propriedades**
+`config.keepData` (Default: `false`): mantém as linhas presentes na tabela, e todos os dados adicionados são inseridos em novas linhas.
 
 [Ver Detalhes](#appendData-1)
 
@@ -294,7 +297,7 @@ TableMv.reset(tabela)
 ### `appendData`
 Adiciona dados (e novas linhas, caso necessário) aos campos da tabela multi-valorada a partir de um array de objetos chave-valor, conforme os identificadores dos campos de formulário.
 
-> TableMv.appendData( Array - Dados , Object [optional] - Configuração )_
+> TableMv.appendData( HTMLElement - Table, Array - Dados , Object [optional] - Configuração )_
 
 **Propriedades**
 `config.keepData` (Default: `false`): mantém as linhas presentes na tabela, e todos os dados adicionados são inseridos em novas linhas.

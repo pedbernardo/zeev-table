@@ -190,7 +190,7 @@ Retorna todas as linhas da tabela multi-valorada, exceto o cabeçalho.
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#getRows)
+[Ver Detalhes](#getRows-1)
 
 <br>
 
@@ -199,7 +199,7 @@ Retorna a última linha da tabela multi-valorada.
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#getLastRow)
+[Ver Detalhes](#getLastRow-1)
 
 <br>
 
@@ -208,7 +208,7 @@ Retorna a quantidade de linhas da tabela-multi-valorada, desconsiderando o cabe�
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#getLength)
+[Ver Detalhes](#getLength-1)
 
 <br>
 
@@ -217,7 +217,7 @@ Retorna o valor de todos os campos de formulário do Zeev presentes na tabela mu
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#getData)
+[Ver Detalhes](#getData-1)
 
 <br>
 
@@ -226,7 +226,7 @@ Remove todas as linhas da tabela multi-valorada deixando apenas uma linha sem ne
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#reset)
+[Ver Detalhes](#reset-1)
 
 <br>
 
@@ -235,7 +235,7 @@ Retorna todas as linhas da tabela multi-valorada, exceto o cabeçalho
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#appendData)
+[Ver Detalhes](#appendData-1)
 
 <br>
 
@@ -244,7 +244,7 @@ Remove a classe auxiliar `-disabled` ao elemento da tabela.
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#enable)
+[Ver Detalhes](#enable-1)
 
 <br>
 
@@ -253,7 +253,7 @@ Adiciona a classe auxiliar `-disabled` ao elemento da tabela.
 
 _Não é necessário parâmetros_
 
-[Ver Detalhes](#disable)
+[Ver Detalhes](#disable-1)
 
 <br>
 <br>
@@ -264,16 +264,16 @@ _Não é necessário parâmetros_
 <br>
 
 #### Actions
-- [reset](#reset)
-- [appendData](#appendData)
-- [enable](#enable)
-- [disable](#disable)
+- [reset](#reset-1)
+- [appendData](#appendData-1)
+- [enable](#enable-1)
+- [disable](#disable-1)
 
 #### DOM
-- [getRows](#getRows)
-- [getLastRow](#getLastRow)
-- [getLength](#getLength)
-- [getData](#getData)
+- [getRows](#getRows-1)
+- [getLastRow](#getLastRow-1)
+- [getLength](#getLength-1)
+- [getData](#getData-1)
 - [getRowData](#getRowData)
 
 <br>
@@ -292,7 +292,7 @@ TableMv.reset(tabela)
 <br>
 
 ### `appendData`
-descrever...
+Adiciona dados (e novas linhas, caso necessário) aos campos da tabela multi-valorada a partir de um array de objetos chave-valor, conforme os identificadores dos campos de formulário.
 
 > TableMv.appendData( Array - Dados , Object [optional] - Configuração )_
 
@@ -316,8 +316,8 @@ const meusDados = [
 ]
 TableMv.appendData(tabela, meusDados)
 
-// ou mantenha os dados existentes, adicionado os novos
-// dados pela inserção de novas linhas
+// ou mantenha os dados existentes na tabela,
+// adicionado os novos dados pela inserção de novas linhas
 TableMv.appendData(tabela, meusDados, { keepData: true })
 ```
 

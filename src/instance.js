@@ -10,12 +10,16 @@ import {
 import * as UtilsDom from './utils/dom'
 import * as UtilsActions from './utils/actions'
 
+const INSTANCE_ALIAS = `_${NAME}`
+
 export function createTable (element, onRowMount) {
   try {
     inspectElement(element)
   } catch (error) {
-    console.warn(`[${NAME}]: ${error}`)
+    return console.warn(`[${NAME}]: ${error}`)
   }
+
+  if (element[INSTANCE_ALIAS]) return element[INSTANCE_ALIAS]
 
   return TableMvFactory(element, onRowMount)
 }
@@ -50,7 +54,7 @@ function TableMvFactory (table, onRowMount) {
 
   mount()
 
-  table[`_${NAME}`] = instance
+  table[INSTANCE_ALIAS] = instance
 
   return instance
 
@@ -166,8 +170,8 @@ function TableMvFactory (table, onRowMount) {
     UtilsActions.reset(instance.table)
   }
 
-  function appendData (data) {
-    UtilsActions.appendData(instance.table, data)
+  function appendData (data, config = {}) {
+    UtilsActions.appendData(instance.table, data, config)
   }
 
   function enable () {

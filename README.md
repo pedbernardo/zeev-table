@@ -411,11 +411,11 @@ TableMv.getData(tabela) // [{...}, {...}, {...}]
 ```js
 [
   {
-    idDoCampoA: 'valor do campo, linha 1'
+    idDoCampoA: 'valor do campo, linha 1',
     idDoCampoB: 'valor do campo, linha 1'
   },
   {
-    idDoCampoA: 'valor do campo, linha 2'
+    idDoCampoA: 'valor do campo, linha 2',
     idDoCampoB: 'valor do campo, linha 2'
   }
 ]
@@ -438,7 +438,7 @@ TableMv.getRowData(tabela) // {...}
 **Exemplo de retorno**
 ```js
 {
-  idDoCampoA: 'valor do campo A, linha informada'
+  idDoCampoA: 'valor do campo A, linha informada',
   idDoCampoB: 'valor do campo B, linha informada'
 }
 ```

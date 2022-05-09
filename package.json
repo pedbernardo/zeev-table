@@ -1,6 +1,6 @@
 {
   "name": "zeev-table",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Non official Zeev library for multi-value tables",
   "main": "dist/table-mv.esm.js",
   "module": "dist/table-mv.esm.js",

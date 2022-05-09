@@ -29,7 +29,7 @@ export function getLength (table) {
 }
 
 export function getData (table, config = {}) {
-  getRows(table).map(row => getRowData(row, config))
+  return getRows(table).map(row => getRowData(row, config))
 }
 
 export function getRowData (row, config = {}) {

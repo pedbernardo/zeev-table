@@ -70,7 +70,7 @@
   }
 
   function getData (table, config = {}) {
-    getRows(table).map(row => getRowData(row, config));
+    return getRows(table).map(row => getRowData(row, config))
   }
 
   function getRowData (row, config = {}) {
@@ -135,12 +135,16 @@
       .add(HELPER_CLASSES.disabledClass);
   }
 
+  const INSTANCE_ALIAS = `_${NAME}`;
+
   function createTable (element, onRowMount) {
     try {
       inspectElement(element);
     } catch (error) {
-      console.warn(`[${NAME}]: ${error}`);
+      return console.warn(`[${NAME}]: ${error}`)
     }
+
+    if (element[INSTANCE_ALIAS]) return element[INSTANCE_ALIAS]
 
     return TableMvFactory(element, onRowMount)
   }
@@ -175,7 +179,7 @@
 
     mount();
 
-    table[`_${NAME}`] = instance;
+    table[INSTANCE_ALIAS] = instance;
 
     return instance
 
@@ -291,8 +295,8 @@
       reset(instance.table);
     }
 
-    function appendData$1 (data) {
-      appendData(instance.table, data);
+    function appendData$1 (data, config = {}) {
+      appendData(instance.table, data, config);
     }
 
     function enable$1 () {

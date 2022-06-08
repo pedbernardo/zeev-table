@@ -456,3 +456,4 @@ TableMv.getRowData(tabela) // {...}
 - Finalizar documentação no README
 - Construir documentação utilizando Vitepress
 - Automatizar build com uso de Github Actions
+- Adicionar suporte a nested tables
